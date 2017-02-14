@@ -1,0 +1,59 @@
+,
+"description": "The build succeeded!",
+"context": "continuous-integration/github"
+
+
+
+
+
+https://192.168.2.10/api/v3/repos/ChennaKesavulu/SparkTesting/deployments
+{
+"ref": "TestGithub",
+"payload": "{\"user\":\"atmos\",\"room_id\":123456}",
+"description": "Deploying my sweet branch"
+}
+
+https://192.168.2.10/api/v3/repos/ChennaKesavulu/SparkTesting/deployments/6/statuses
+{
+"state": "success",
+"target_url": "https://www.twitter.com"
+
+}
+
+https://192.168.2.10/api/v3/repos/ChennaKesavulu/SparkTesting/statuses/7784c85a521253e668b32cb300a7e2a82f482d5a
+{
+"state": "success",
+"target_url": "https://www.salesforce.com"
+
+}
+=====================================================================================================================================
+
+https://api.github.com/repos/harisheidiko/Testing/deployments
+basic authentication
+content-type
+Body:
+{
+"ref": "spark",
+"payload": "{\"user\":\"atmos\",\"room_id\":123456}",
+"description": "Deploying my sweet branch"
+}
+=-========================================
+to create deployment status:
+https://api.github.com/repos/harisheidiko/Testing/deployments/7068274/statuses
+request:
+{
+"state": "success",
+"target_url": "https://example.com/deployment/42/output",
+"description": "Deployment finished successfully."
+}
+============================================
+to update status from api
+https://api.github.com/repos/harisheidiko/Testing/statuses/a3c069554cfeda143016c7a7ce78d1878886b95d
+with basic authentication
+request:
+{
+"state": "success",
+"target_url": "https://example.com/build/status",
+"description": "The build succeeded!",
+"context": "continuous-integration/github"
+}
